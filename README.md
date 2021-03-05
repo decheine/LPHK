@@ -161,6 +161,41 @@ I have specifically chosen to do my best to develop this using as many cross pla
 * Go to `Layout > Save layout as...` to save your current layout for future use, colors and all.
 * Go to `Layout > Load layout...` to load an existing layout. Examples are in `user_layouts/examples/`.
 
+### Load layout on startup
+
+*New Feature*
+
+To load a layout on startup, the command line argument `-l` or `--layout` has been added.
+
+#### Windows
+
+On Windows, open the shortcut properties window. In the "Target" field, it should look like
+
+```cmd
+"<absolute path>/LPHK.exe"
+```
+
+This is the command line command that Windows runs when launching the shortcut. Add the following line to load a
+specific layout on startup:
+
+```shell
+-l "<absolute path to .lpl file>"
+```
+
+So it should look something like
+
+```shell
+"C:\Program Files (x86)\LPHK-dev\LPHK.exe" -l "C:\Users\%USER%\Documents\LPHK-develop\user_layouts\Basic.lpl"
+```
+
+Make sure to surround the paths with double quotes so Windows is happy.
+
+
+---
+
+
+
+
 #### The whole GUI is still rough around the edges, so don't be too surprised if something breaks. If it does, kindly open a detailed issue on GitHub so I can fix the error. :) And don't feel shy making feature requests, either!
 
 ## What is LPHKscript? [[Table of Contents]](https://github.com/nimaid/LPHK#table-of-contents)
